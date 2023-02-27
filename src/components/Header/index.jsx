@@ -25,7 +25,7 @@ export default function Header({ variant }) {
   const [isLogged, setIsLogged]= state.UserApi.isLogged
   const [isAdmin, setIsAdmin]= state.UserApi.isAdmin
 const logutUser = async() =>{
-    await axios.get('https://cubexback.online/user/logout')
+    await axios.get('/user/logout')
     localStorage.removeItem('firstLogin')
     setIsAdmin(false)
     setIsLogged(false)

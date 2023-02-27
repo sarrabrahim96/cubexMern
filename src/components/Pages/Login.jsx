@@ -21,12 +21,7 @@ function Login() {
     e.preventDefault()
     try {
       
-      const res =await axios.post('/user/login' , {...user},{
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      })
-      
+      const res =await axios.post('/user/login' , {...user})
       console.log(res)
       localStorage.setItem('firstLogin' , true)
       window.location.href ="/";
