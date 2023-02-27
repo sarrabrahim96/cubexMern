@@ -9,9 +9,10 @@ import {Link} from 'react-router-dom'
 function Users() {
   pageTitle('Utilisateurs');
   const [Users, setUsers] = useState([]);
+  const axiosInstance = axios.create({baseURL :"https://cubexback.online"})
   useEffect(()=>{
     const getAllUser =  async()=>{
-     const res= await axios.get('https://cubexback.online/user/users');
+     const res= await axios.get('/user/users');
      setUsers(res.data.response);
     }
    getAllUser();

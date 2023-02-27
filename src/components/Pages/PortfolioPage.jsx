@@ -99,9 +99,9 @@ export default function PortfolioPage() {
               <Spacing lg="65" md="40" />
               <span
                 className="cs-text_btn"
-                onClick={() => setItemShow(itemShow + 3)}
+                onClick={() => setItemShow(itemShow + 1)}
               >
-                <span>Charger Plus <LoadMore/></span>
+                <span><LoadMore/>Charger plus ...</span>
                 <Icon icon="bi:arrow-right" />
               </span>
             </>

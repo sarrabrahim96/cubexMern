@@ -9,6 +9,7 @@ function Contact() {
 
   pageTitle("Contact");
   const [Contact, setContact] = useState([]);
+  const axiosInstance = axios.create({baseURL :"https://cubexback.online"})
 
   useEffect(() => {
     const getContact = async () => {

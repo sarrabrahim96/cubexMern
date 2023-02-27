@@ -4,6 +4,7 @@ import axios from 'axios'
 function UserApi(token) {
     const[isLogged , setIsLogged]= useState(false)
     const[isAdmin , setIsAdmin]= useState(false)
+  
     useEffect(() =>{
       if(token){
           const getUser = async () =>{

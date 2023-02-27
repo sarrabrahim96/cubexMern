@@ -37,6 +37,7 @@ const initialeState ={
     const [onEdit , setOnEdit] = useState(false)
     const [callback , setCallback]= state.offersApi.callback    
     const [offers] = state.offersApi.offers
+    const axiosInstance = axios.create({baseURL :"https://cubexback.online"})
 
 useEffect(()=>{
         if(param.id){

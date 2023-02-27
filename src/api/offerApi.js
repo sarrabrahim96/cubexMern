@@ -10,6 +10,7 @@ const [sort , setSort]= useState('')
 const [search , setSearch]= useState('')
 const [page , setpage]= useState(1)
 const [result , setResult]= useState(0)
+
 useEffect(() =>{
   const getoffers = async () => {
     const res = await axios.get(`/api/offer?limit=${page*9}&${pays}&${sort}&poste[regex]=${search}`)

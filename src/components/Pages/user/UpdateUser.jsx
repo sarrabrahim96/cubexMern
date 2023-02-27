@@ -22,7 +22,7 @@ function UpdateUser() {
      const [isAdmin] = state.UserApi.isAdmin
      const [onEdit , setOnEdit] = useState(false)
      const [Users] = state.UsersAPI.Users
-
+     const axiosInstance = axios.create({baseURL : "https://cubexback.online"})
 
      useEffect(()=>{
         if(param.id){
@@ -52,7 +52,7 @@ function UpdateUser() {
         e.preventDefault()
         try {
         if(!isAdmin) return alert("vous n'étes pas un admin.")
-        await axios.put(`https://cubexback.online/user/updateUser/${Users._id}` , {...User})
+        await axios.put(`/user/updateUser/${Users._id}` , {...User})
           } 
         catch (error) {
            alert(error.response.data.msg)

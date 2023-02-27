@@ -9,12 +9,13 @@ export const GlobalState = createContext()
 
 export const DataProvider = ({children}) => {
   const [token , setToken] = useState(false)
-  
+ // const axiosInstance = axios.create({baseURL :"https://cubexback.online"})
   useEffect(()=>{
     const firstLogin = localStorage.getItem('firstLogin')
     if(firstLogin ){    
       const refreshToken = async () => {
       const res = await axios.get('/user/refresh_token')
+      console.log(res.data.accessToken)
       setToken(res.data.accessToken)
 
       setTimeout(() =>{

@@ -4,6 +4,7 @@ import axios from 'axios'
 function UsersAPI() {
     const [Users , setUsers] = useState([])
 
+
     useEffect(()=>{
         const getAllUser =  async()=>{
          const res= await axios.get('/user/users');

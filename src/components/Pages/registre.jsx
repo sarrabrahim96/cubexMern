@@ -13,6 +13,7 @@ pageTitle("s'inscrire");
     email:'',
     password:''
   })
+  const axiosInstance = axios.create({baseURL :"https://cubexback.online"})
   const onChangeInput = e =>{
     const {name , value}= e.target;
     setUser({...user, [name]:value})
